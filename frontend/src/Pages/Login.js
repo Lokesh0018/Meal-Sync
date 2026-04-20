@@ -30,7 +30,7 @@ const Auth = () => {
                             className="action-btn"
                             onClick={() => step === 1 && setStep(2)}
                         >
-                            {step === 1 ? 'Send OTP' : 'Verify & Sign In'}
+                            Login
                         </button>
                     </form>
 
