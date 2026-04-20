@@ -1,0 +1,522 @@
+:root {
+  --tilicho-red: #E11922;
+  --tilicho-dark-red: #B3121A;
+  --bg-soft: #FBFBFC;
+  --text-main: #1A1A1B;
+  --text-muted: #666666;
+  --border-light: #EEEEEE;
+   --red: #E11922;
+  --dark-red: #B3121A;
+  --bg: #f5f6f8;
+  --text: #1a1a1b;
+  --muted: #666;
+  --border: #e5e5e5;
+  --white: #fff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  display: flex;
+  min-height: 100vh;
+  background-color: #fff;
+  font-family: 'Inter', -apple-system, sans-serif;
+}
+
+.auth-page,.login-page,.AuthLayout {
+  display: flex;
+}
+
+/* Brand Side */
+.brand-panel {
+  display: flex;
+  flex: 1;
+  background-color: var(--bg-soft);
+  padding: 60px;
+  border-right: 1px solid var(--border-light);
+}
+
+.brand-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  gap: 50px;
+}
+
+.main-logo {
+  width: 200px;
+  height: auto;
+}
+
+.brand-name {
+    font-size: 2rem;
+    font-weight: 400;
+    color: #111827;
+    margin-bottom: 0.75rem;
+    margin-bottom: 10px;
+}
+
+.brand-tagline {
+    color: #6B7280;
+    font-size: 1.1rem;
+    max-width: 600px;
+}
+/* Form Side */
+.form-panel {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 380px;
+}
+
+.auth-header h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 8px;
+  letter-spacing: -0.5px;
+}
+
+.auth-header p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 32px;
+}
+
+/* Inputs */
+.input-field {
+  margin-bottom: 24px;
+}
+
+.input-field label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+  color: #888;
+}
+.checkbox-group input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+.checkbox-group input[type="checkbox"]:checked {
+  background-color: var(--tilicho-red);
+  border-color: var(--tilicho-red);
+}
+.checkbox-group input[type="checkbox"]:checked::after {
+  content: "✓";
+  color: white;
+  font-size: 12px;
+  position: absolute;
+  top: -2px;
+  left: 3px;
+}
+.checkbox-group input[type="checkbox"]:focus {
+  outline: none;
+  box-shadow: none;
+}
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+.otp-input {
+  text-align: center;
+  letter-spacing: 8px;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.login-btn {
+  position: absolute;
+  width: 100px;
+  height: 50px;
+  padding: 16px;
+  background-color: var(--tilicho-red);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin: 10px;
+  right: 0;
+}
+
+/* Buttons */
+.action-btn {
+  width: 100%;
+  padding: 16px;
+  background-color: var(--tilicho-red);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.action-btn:hover,
+.login-btn:hover {
+  background-color: var(--tilicho-dark-red);
+}
+
+.card-footer {
+  margin-top: 24px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.text-btn {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.text-btn:hover {
+  color: var(--tilicho-red);
+}
+
+/* Layout */
+.home-page {
+  height: 100vh;
+  width: 100vw;
+  background: var(--bg);
+}
+
+/* Navbar */
+.navbar {
+  height: 70px;
+  color: black;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  justify-content: space-between;
+  padding: 0 40px;
+}
+
+.header-logo {
+  height: 40px;
+  width: auto;
+}
+
+.nav-links span {
+  margin: 0 15px;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.nav-links .active {
+  border-bottom: 2px solid black;
+  opacity: 1;
+}
+
+.user {
+  font-size: 0.9rem;
+}
+
+/* Content */
+.content {
+  padding: 40px;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  color: black;
+  margin-bottom: 30px;
+}
+
+/* Meal Grid */
+.meal-grid {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.meal-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  width: 260px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.meal-card h3 {
+  margin-bottom: 8px;
+}
+
+.meal-card p {
+  color: var(--muted);
+  margin-bottom: 15px;
+}
+
+.meal-card button {
+  background: var(--tilicho-red);
+  color: white;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.meal-card button:hover {
+  background: var(--tilicho-dark-red);
+}
+
+.meal-card .link {
+  display: block;
+  margin-top: 10px;
+  font-size: 0.85rem;
+  color: var(--muted);
+  cursor: pointer;
+}
+
+/* Weekly */
+.weekly {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  margin: 30px auto;
+  width: 60%;
+}
+
+.weekly h2 {
+  margin-bottom: 10px;
+}
+
+.weekly p {
+  color: var(--muted);
+  margin-bottom: 15px;
+}
+
+.weekly button {
+  background: var(--red);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Bottom Info */
+.info-grid {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.info-card {
+  background: white;
+  padding: 20px;
+  width: 220px;
+  border-radius: 10px;
+}
+
+.info-card h4 {
+  margin-bottom: 10px;
+}
+
+.info-card p {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* Layout */
+.admin-dashboard {
+  height: 100vh;
+  width: 100vw;
+  background: var(--bg);
+  font-family: 'Inter', sans-serif;
+}
+
+/* Navbar */
+.admin-navbar {
+  height: 70px;
+  background: var(--red);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+}
+
+.admin-navbar nav span {
+  margin: 0 15px;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.admin-navbar .active {
+  border-bottom: 2px solid white;
+  opacity: 1;
+}
+
+/* Content */
+.admin-content {
+  padding: 30px 40px;
+}
+
+.subtitle {
+  color: var(--muted);
+  margin-bottom: 20px;
+}
+
+/* Cards */
+.card,
+.preferences-card {
+  background: var(--white);
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.preferences-card {
+  text-align: left;
+}
+
+/* Checkbox */
+.checkbox-group label {
+  display: block;
+  margin: 10px 0;
+}
+
+/* Button */
+.primary-btn {
+  margin-top: 15px;
+  background: var(--red);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.primary-btn:hover {
+  background: var(--dark-red);
+}
+
+/* Grid */
+.stats-grid {
+  display: flex;
+  gap: 20px;
+}
+
+/* Bar Chart */
+.bar-chart {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  height: 150px;
+  margin-top: 20px;
+  width: 300px; /* ✅ instead of 1180px */
+}
+.bar-container {
+  text-align: center;
+}
+
+.bar-container span {
+  display: block;
+  margin-top: 5px;
+  font-size: 0.75rem;
+}
+
+.bar {
+  width: 30px;
+  background: linear-gradient(to top, #E11922, #ff4d4f);
+  border-radius: 6px 6px 0 0;
+}
+
+/* Donut */
+.donut {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: conic-gradient(var(--red) 64%, #ddd 0%);
+  margin: 20px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.donut-inner {
+  width: 100px;
+  height: 100px;
+  background: white;
+  border-radius: 50%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.legend {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.opted {
+  color: var(--red);
+}
+
+.pending {
+  color: gray;
+}
+
+/* Table */
+.table-card table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.table-card th,
+.table-card td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .brand-panel {
+    display: none;
+  }
+}
